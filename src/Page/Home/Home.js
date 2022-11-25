@@ -27,20 +27,17 @@ const Home = () => {
   };
 
   return (
-
-    
     <section>
-     
       <div className={`home ${active ? "blur" : ""}`}>
-        <Fond></Fond> 
-        <Dark_Light />
+        <Fond></Fond>
+        
         {/* C O M P A R T I M E N T  
         -  
         E S P A C E*/}
         <div className="coach">
           <div className="bloc1">
             <div className={`boutonhomeanim btn2 ${coach ? "visible" : ""}`}>
-              <NavLink exact to="/profil_coach">
+              <NavLink to="/profil_coach">
                 <h2 className="boutonhome">Profil</h2>
               </NavLink>
             </div>
@@ -58,7 +55,7 @@ const Home = () => {
 
           <div className="bloc1">
             <div className={`boutonhomeanim btn2 ${coach ? "visible" : ""}`}>
-              <NavLink exact to="/formule">
+              <NavLink to="/formule">
                 <h2 className="boutonhome">Formule</h2>
               </NavLink>
             </div>
@@ -71,9 +68,10 @@ const Home = () => {
         <div className="profil">
           <div className="box">
             <div className="content">
-                     <h2>Contact</h2>
+              <h2>Contact</h2>
 
-              <CopyToClipboard text="senechal.thibaut@hotmail.fr">
+              <CopyToClipboard
+                text="senechal.thibaut@hotmail.fr">
                 <span className="copyvalid" onClick={classToggle}>
                   senechal.thibaut@hotmail.fr
                 </span>
@@ -93,7 +91,7 @@ const Home = () => {
         <div className="devweb">
           <div className="bloc1">
             <div className={`boutonhomeanim btn2 ${devweb ? "visible" : ""}`}>
-              <NavLink exact to="/profil_developper">
+              <NavLink to="/profil_developper">
                 <h2 className="boutonhome">Profil</h2>
               </NavLink>
             </div>
@@ -111,13 +109,14 @@ const Home = () => {
 
           <div className="bloc1">
             <div className={`boutonhomeanim btn2 ${devweb ? "visible" : ""}`}>
-              <NavLink exact to="/portfolio">
+              <NavLink to="/portfolio">
                 <h2 className="boutonhome">Portfolio</h2>
               </NavLink>
             </div>
             <i className={`barreBD ${devweb ? "" : "barreG1"}`}></i>
           </div>
         </div>
+        <Dark_Light />
       </div>
 
       {/* C O M P A R T I M E N T  
@@ -128,9 +127,7 @@ const Home = () => {
         <span className="copyvalid" onClick={classToggle}>
           ok
         </span>
-       
-      </div> 
-      
+      </div>
     </section>
   );
 };

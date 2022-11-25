@@ -16,17 +16,19 @@ const Navigation = () => {
       ></button>
       <aside className={`contentmenu ${btnmenu ? "active" : ""}`}>
         <div className="contentwrapper">
-          <NavLink exact to="/home">
-            <div className="logohome"><p>Home</p></div>
+          <NavLink to="/home">
+            <div className="logohome">
+              <p>Home</p>
+            </div>
           </NavLink>
           <div className="contentnavcoach">
             <h2>Coach</h2>
             <div className="contentmenucoach">
-              <NavLink exact to="/profil_coach">
+              <NavLink to="/profil_coach">
                 <h3>Profil</h3>
               </NavLink>
               <br />
-              <NavLink exact to="/formule">
+              <NavLink to="/formule">
                 <h3>Formule</h3>
               </NavLink>
             </div>
@@ -34,45 +36,47 @@ const Navigation = () => {
           <div className="contentnavdev">
             <h2>Developpeur</h2>
             <div className="contentmenudev">
-              <NavLink exact to="/profil_developper">
+              <NavLink to="/profil_developper">
                 <h3>Profil</h3>
               </NavLink>
               <br />
-              <NavLink exact to="/portfolio">
+              <NavLink to="/portfolio">
                 <h3>Portfolio</h3>
               </NavLink>
             </div>
           </div>
         </div>
       </aside>
-      
+
       <header>
         <div className="wrapper">
           <div className="navcoach">
             <h2>Coach</h2>
             <div className="menucoach">
-              <NavLink exact to="/profil_coach">
+              <NavLink to="/profil_coach">
                 <h3>Profil</h3>
               </NavLink>
               <br />
-              <NavLink exact to="/formule">
+              <NavLink to="/formule">
                 <h3>Formule</h3>
               </NavLink>
             </div>
           </div>
 
-          <NavLink exact to="/home">
-            <div className="logohome" title="Home"><p>Home</p></div>
+          <NavLink to="/home">
+            <div className="logohome" title="Home">
+              <p>Home</p>
+            </div>
           </NavLink>
 
           <div className="navdev">
             <h2>Developpeur</h2>
             <div className="menudev">
-              <NavLink exact to="/profil_developper">
+              <NavLink to="/profil_developper">
                 <h3>Profil</h3>
               </NavLink>
               <br />
-              <NavLink exact to="/portfolio">
+              <NavLink to="/portfolio">
                 <h3>Portfolio</h3>
               </NavLink>
             </div>
