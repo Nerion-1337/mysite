@@ -49,15 +49,15 @@ const Profil_dev = () => {
             </div>
 
             <div className="idsocial">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              <a href="#" target="_blank" rel="no-opener no-referrer">
+                <i className="fa fa-linkedin" aria-hidden="true"></i>
               </a>
               <a
                 href="https://codepen.io/Nerion1337"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="no-opener no-referrer"
               >
-                <i class="fa fa-codepen" aria-hidden="true"></i>
+                <i className="fa fa-codepen" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -78,8 +78,6 @@ const Profil_dev = () => {
             </div>
           </div>
         </div>
-
-
       </div>
       <div className={`popuphome ${active ? "active" : ""}`}>
         <h2>Copié !</h2>

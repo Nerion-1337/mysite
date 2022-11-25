@@ -39,9 +39,6 @@ body.modelight {
 
             ul {
                 color: rgba($color: #000000, $alpha: 0.5);
-
-                .phone {
-                }
                 li {
                     &:hover {
                         color: rgba($color: #000000, $alpha: 1);
@@ -54,9 +51,6 @@ body.modelight {
             a {
                 color: $fond1;
                 border: solid 2px $fond1;
-
-                .fa {
-                }
 
                 &::before {
                     background: $fond1;
