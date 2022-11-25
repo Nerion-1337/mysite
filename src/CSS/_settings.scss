@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $fond1;
+    transition: background 1s;
+    
+}
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+a:visited {
+    color: #fff;
+}
+
+body.modelight {
+    background: $fond2;
+    transition: background 1s;
+
+    li {
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        color: black;
+    }
+
+    a:visited {
+        color: black;
+    }
+}

@@ -1,0 +1,150 @@
+@media screen and (min-width: 900px) {
+    .contentmenu {
+        display: none;
+    }
+    .btncontentmenu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        display: none;
+    }
+
+    .btncontentmenu {
+        position: fixed;
+        display: block;
+        top: 20px;
+        left: 20px;
+        background-color: $fond1;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid $fond2;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: 0 0 10px $bdx, 0 0 30px $bdx, 0 0 50px $bdx;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .btncontentmenu.active {
+        position: fixed;
+        box-shadow: 0 0 20px $bdx;
+        top: 20px;
+        left: 20px;
+    }
+
+    .btncontentmenu::before {
+        content: "";
+        position: absolute;
+        background: $fond2;
+        width: 20px;
+        height: 2px;
+        transform: translateY(5px);
+        transition: 0.5s;
+    }
+
+    .btncontentmenu.active::before {
+        transform: translateY(0px) rotate(225deg);
+    }
+
+    .btncontentmenu::after {
+        content: "";
+        position: absolute;
+        background: $fond2;
+        width: 20px;
+        height: 2px;
+        transform: translateY(-5px);
+        transition: 0.5s;
+    }
+
+    .btncontentmenu.active::after {
+        transform: translateY(0px) rotate(-225deg);
+    }
+
+    .logohome {
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    .contentmenu {
+        width: 300px;
+        height: 100vh;
+        box-shadow: 0 0 10px $bdx;
+        transform: translateX(-105%);
+        background: rgb(20, 20, 20);
+        transition: 1s;
+        display: block;
+        position: fixed;
+        top:0;
+        z-index: 10;
+    }
+
+    .contentmenu.active {
+        transform: translateX(0%);
+        top: 0;
+    }
+
+    .contentwrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .contentnavcoach {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        height: 50px;
+        overflow: hidden;
+        transition: 0.5s;
+        border-bottom: 1px solid #222;
+    }
+
+    .contentmenucoach {
+        margin-top: 20px;
+    }
+
+    .contentmenucoach h3 {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        padding: 5px;
+        color: rgba($color: #ffffff, $alpha: 0.5);
+    }
+
+    .contentnavcoach:hover {
+        height: 160px;
+    }
+
+    .contentnavdev {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        height: 50px;
+        overflow: hidden;
+        transition: 0.5s;
+        border-bottom: 1px solid #222;
+    }
+
+    .contentmenudev h3 {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        padding: 5px;
+        color: rgba($color: #ffffff, $alpha: 0.5);
+    }
+
+    .contentmenudev {
+        margin-top: 20px;
+    }
+
+    .contentnavdev:hover {
+        height: 160px;
+    }
+}

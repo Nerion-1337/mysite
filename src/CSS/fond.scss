@@ -1,0 +1,61 @@
+@import "./fondlight.scss";
+
+.fondsite {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -10;
+    @extend %flexbox;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: monospace;
+    color: #222;
+    opacity: 0.7;
+    transition: color 1s;
+}
+
+.fondsitetableau {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50.5%;
+}
+
+.fondcolonne {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 5vw;
+    width: 100%;
+    line-height: 0.9em;
+    letter-spacing: 0.95vw;
+    text-align: center;
+}
+
+.animfond {
+    animation: animatefond 10s linear infinite;
+}
+.animfond2 {
+    animation: animatefond 10s linear infinite;
+    animation-delay: -4s;
+}
+.animfond3 {
+    animation: animatefond 10s linear infinite;
+    animation-delay: -8s;
+}
+
+@keyframes animatefond {
+    0%,
+    50% {
+        color: #222;
+        text-shadow: 0 0 0 #222;
+    }
+
+    75%,
+    90% {
+        color: rgba(255, 255, 255, 0.9);
+        text-shadow: 0 0 10px $bdx, 0 0 20px $bdx, 0 0 40px $bdx, 0 0 60px $bdx;
+    }
+}
+
+@import "./fondecran.scss";

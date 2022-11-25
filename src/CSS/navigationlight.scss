@@ -1,0 +1,87 @@
+body.modelight {
+    header {
+        box-shadow: 0 0 12px $blue;
+    }
+.wrapper{
+    background: rgb(210, 208, 208);
+}
+    .contentmenu {
+        background: rgb(210, 208, 208);
+        transition: 1s;
+    }
+
+    nav h2 {
+        color: $blue;
+    }
+
+    .logohome {
+        background: url(../Media/logo-st-v8.png);
+        background-size: 60px 60px;
+        background-repeat: no-repeat;
+        background-position: 50% 70%;
+    }
+
+    .logohome p {
+        color: rgba($color: rgb(0, 0, 0), $alpha: 0.5);
+        font-weight: 900;
+    }
+
+    .menucoach {
+        background: rgb(220, 220, 220);
+        box-shadow: 0 0 12px $blue;
+    }
+
+    nav .navcoach .menucoach h3 {
+        color: rgba($color: #000000, $alpha: 0.5);
+    }
+
+    nav .navcoach .menucoach h3:hover {
+        color: rgba($color: #000, $alpha: 1);
+    }
+
+    .menudev {
+        background: rgb(220, 220, 220);
+        box-shadow: 0 0 12px $blue;
+    }
+
+    nav .navdev .menudev h3 {
+        color: rgba($color: black, $alpha: 0.5);
+    }
+
+    nav .navdev .menudev h3:hover {
+        color: rgba($color: #000, $alpha: 1);
+    }
+
+    .btncontentmenu {
+        background-color: $fond2;
+
+        border: 2px solid $fond1;
+        box-shadow: 0 0 10px $blue, 0 0 30px $blue, 0 0 50px $blue;
+    }
+
+    .btncontentmenu.active {
+        box-shadow: 0 0 20px $blue;
+    }
+
+    .btncontentmenu::before {
+        background: $fond1;
+    }
+    .btncontentmenu::after {
+        background: $fond1;
+    }
+
+    .contentmenu {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px $blue;
+    }
+
+    .contentmenucoach h3 {
+        color: rgba($color: black, $alpha: 0.5);
+    }
+
+    .contentmenudev h3 {
+        color: rgba($color: black, $alpha: 0.5);
+    }
+    
+}

@@ -1,0 +1,72 @@
+.darklight {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: $fond1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid $fond2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px $bdx, 0 0 30px $bdx, 0 0 50px $bdx;
+    z-index: 110;
+}
+
+.darklight::before {
+    content: "\f185";
+    font-family: fontAwesome;
+    color: $fond2;
+    z-index: 10;
+    transition: 0.5s;
+    font-size: 1.3em;
+}
+
+.darklight::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: $fond2;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.darklight:hover::before {
+    color: $fond1;
+    transition: 0s;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.darklight:hover::after {
+    transform: scale(1);
+}
+
+body.modelight {
+    .darklight {
+        background-color: $fond2;
+        border: 2px solid #111;
+        box-shadow: 0 10px 20px $blue, 0 0 50px $blue;
+    }
+
+    .darklight::before {
+        content: "\f186";
+        color: $fond1;
+        z-index: 10;
+        transition: 0.5s;
+        font-size: 1.3em;
+        font-weight: 900;
+    }
+
+    .darklight::after {
+        background: $fond1;
+    }
+
+    .darklight:hover::before {
+        color: $fond2;
+    }
+}

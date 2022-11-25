@@ -1,0 +1,585 @@
+@media screen and (max-width: 900px) {
+
+
+  .home {
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+  }
+  
+  
+  .boutonhome {
+    position: relative;
+    padding: 12px;
+    background: $fond1;
+    border-radius: 20px;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    transition: color 2s;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+  }
+  
+  .boutonhomeanim {
+    position: relative;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+    padding: 4px;
+    background: $fond1;
+    border-radius: 20px;
+    overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    transition: 0.5s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  
+    &:before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: conic-gradient(rgba(255, 255, 255, 0.8), transparent, transparent, transparent);
+      animation: animate2 8s linear infinite;
+      animation-delay: -4s;
+      opacity: 0;
+      transition: 3s;
+    }
+  
+    &:after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: conic-gradient(rgba(255, 255, 255, 0.8), transparent, transparent, transparent);
+      animation: animate2 8s linear infinite;
+      opacity: 0;
+      transition: 3s;
+    }
+  }
+  .boutonhomeanim:hover::before,
+  .boutonhomeanim:hover::after {
+    opacity: 1;
+  }
+  
+  .boutonhomeanim:hover .boutonhome {
+    color: #fff;
+  }
+  
+  @keyframes animate2 {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .btn1 {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .btn2 {
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+    transition-property: opacity, visibility;
+  }
+  
+  .invisible {
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 1.25s;
+  }
+  
+  .visible {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 1.5s;
+  }
+  
+  /* C O M P A R T I M E N T  
+          -  
+          E S P A C E*/
+  
+  .coach {
+    //background: red;
+    min-height: 8vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .bloc1 {
+    position: relative;
+    padding: 10px;
+  }
+  .barreCG {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 3px;
+    height: 20vh;
+    background: $bdx;
+    transform-origin: bottom;
+    transform: rotate(0deg);
+    transition: 0s, width 0s, height 0.75s;
+    transition-delay: 0s, 0s, 1s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+  
+  .barreHG {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 3px;
+    height: 30vh;
+    background: $bdx;
+    transform-origin: bottom;
+    transform: rotate(0deg);
+    transition: 0s, width 0s, height 0.75s;
+    transition-delay: 0s, 0s, 2.25s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+  
+  .barreBG {
+    opacity:0;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 30vw;
+    height: 3px;
+    background: $bdx;
+    transform-origin: right;
+    transform: rotate(142deg);
+    transition: 0s, width 0.75s, height 0s;
+    transition-delay: 0s, 2.25s, 0s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+  
+  /* C O M P A R T I M E N T  
+          -  
+          E S P A C E*/
+  .profil {
+    min-height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profil .box {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0s, box-shadow 3s;
+  }
+  
+  .profil .box:hover {
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx, 0 0 70px $bdx, 0 0 90px $bdx;
+  }
+  
+  .profil .box::before {
+    content: "";
+    position: absolute;
+    inset: -50px 60px;
+    background: linear-gradient(20deg, #111, $bdx, $bdx, #111);
+    animation: animate 8s linear infinite;
+    box-shadow: 0 0 20px $bdx, 0 0 40px $bdx;
+    transition: 0s, inset 2s;
+    z-index: 1;
+  }
+  
+  .profil .box:hover::before {
+    inset: -10px -10px;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .box .content {
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .box .content::after {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    background: $fond1;
+    background-image: url(../../Media/logo-st-v6.png);
+    background-size: 145px 145px;
+    background-repeat: no-repeat;
+    background-position: 50% 70%;
+    border-radius: 50%;
+    transition: 0.5s;
+    z-index: -1;
+  }
+  
+  .box .content h2 {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    font-size: 1.15em;
+  }
+  
+  .box .content span {
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.8em;
+    transition: 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 0.8em;
+  }
+  
+  .box .content span:hover {
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    transition: 0.5s;
+  }
+  
+  /* C O M P A R T I M E N T  
+          -  
+          E S P A C E*/
+  .popuphome {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 100;
+    border-radius: 10px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 0.1em;
+  }
+  
+  .blur {
+    filter: blur(5px);
+    pointer-events: none;
+  }
+  
+  .active {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .popuphome span {
+    padding: 10px;
+    margin-top: 10px;
+    background: black;
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 10px;
+  }
+  
+  .popuphome span:hover {
+    font-weight: 600;
+    background: $bdx;
+  }
+  
+  /* C O M P A R T I M E N T  
+          -  
+          E S P A C E*/
+  .devweb {
+    //background: blue;
+    min-height: 8vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  
+  .barreCD {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 20vh;
+    background: $bdx;
+    transition: 0s, width 0s, height 0.75s;
+    transform-origin: top;
+    transform: rotate(180deg);
+    transition-delay: 0s, 0s, 1s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+  
+  .barreHD {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 30vw;
+    height: 3px;
+    background: $bdx;
+    transform-origin: left;
+    transform: rotate(140deg);
+    transition: 0s, width 0.75s, height 0s;
+    transition-delay: 0s, 2.25s, 0s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+  
+  .barreBD {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 30vh;
+    background: $bdx;
+    transition: 0s, width 0s, height 0.75s;
+    transform-origin: top;
+    transform: rotate(180deg);
+    transition-delay: 0s, 0s, 2.25s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+  
+  .barreG1 {
+    height: 0px;
+    width: 3px;
+    transition-delay: 0s;
+  }
+}
+
+
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+
+  .barreHG {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 33vw;
+    height: 3px;
+    background: $bdx;
+    transform-origin: right;
+    transform: rotate(220deg);
+    transition: 0s, width 0.75s, height 0s;
+    transition-delay: 0s, 2.25s, 0s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+  
+  .barreBG {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 33vw;
+    height: 3px;
+    background: $bdx;
+    transform-origin: right;
+    transform: rotate(142deg);
+    transition: 0s, width 0.75s, height 0s;
+    transition-delay: 0s, 2.25s, 0s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+
+
+
+  .barreHD {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 33vw;
+    height: 3px;
+    background: $bdx;
+    transform-origin: left;
+    transform: rotate(140deg);
+    transition: 0s, width 0.75s, height 0s;
+    transition-delay: 0s, 2.25s, 0s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+  
+  .barreBD {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 33vw;
+    height: 3px;
+    background: $bdx;
+    transition: 0s, width 0.75s, height 0s;
+    transform-origin: left;
+    transform: rotate(220deg);
+    transition-delay: 0s, 2.25s, 0s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+  .barreG1 {
+    height: 0px;
+    width: 3px;
+    transition-delay: 0s;
+  }
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+
+  .barreHG {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 38vw;
+    height: 3px;
+    background: $bdx;
+    transform-origin: right;
+    transform: rotate(225deg);
+    transition: 0s, width 0.75s, height 0s;
+    transition-delay: 0s, 2.25s, 0s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+  
+  .barreBG {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 38vw;
+    height: 3px;
+    background: $bdx;
+    transform-origin: right;
+    transform: rotate(137deg);
+    transition: 0s, width 0.75s, height 0s;
+    transition-delay: 0s, 2.25s, 0s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+
+
+
+  .barreHD {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 38vw;
+    height: 3px;
+    background: $bdx;
+    transform-origin: left;
+    transform: rotate(135deg);
+    transition: 0s, width 0.75s, height 0s;
+    transition-delay: 0s, 2.25s, 0s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+  
+  .barreBD {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 38vw;
+    height: 3px;
+    background: $bdx;
+    transition: 0s, width 0.75s, height 0s;
+    transform-origin: left;
+    transform: rotate(225deg);
+    transition-delay: 0s, 2.25s, 0s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+  .barreG1 {
+    height: 0px;
+    width: 3px;
+    transition-delay: 0s;
+  }
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 1100px) and (max-height: 450px) {
+
+  .barreHG {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 38vw;
+    height: 3px;
+    background: $bdx;
+    transform-origin: right;
+    transform: rotate(215deg);
+    transition: 0s, width 0.75s, height 0s;
+    transition-delay: 0s, 2.25s, 0s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+  
+  .barreBG {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 38vw;
+    height: 3px;
+    background: $bdx;
+    transform-origin: right;
+    transform: rotate(147deg);
+    transition: 0s, width 0.75s, height 0s;
+    transition-delay: 0s, 2.25s, 0s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+
+
+
+  .barreHD {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 38vw;
+    height: 3px;
+    background: $bdx;
+    transform-origin: left;
+    transform: rotate(145deg);
+    transition: 0s, width 0.75s, height 0s;
+    transition-delay: 0s, 2.25s, 0s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+  
+  .barreBD {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 38vw;
+    height: 3px;
+    background: $bdx;
+    transition: 0s, width 0.75s, height 0s;
+    transform-origin: left;
+    transform: rotate(215deg);
+    transition-delay: 0s, 2.25s, 0s;
+    box-shadow: 0 0 20px $bdx, 0 0 50px $bdx;
+  }
+
+
+}
