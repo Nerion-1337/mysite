@@ -18,7 +18,9 @@ const Profil_dev = () => {
           <div className="bloc1_profil_dev">
             <div className="imgcontent">
               <img src="./Media/thibaut.jpg" alt="moi" />
-              <h3>Senechal Thibaut</h3>
+              <div className="myname">
+                <h3 data-text="Senechal Thibaut">Senechal Thibaut</h3>
+              </div>
             </div>
             <div className="idcontent">
               <ul>
@@ -42,13 +44,17 @@ const Profil_dev = () => {
             </div>
 
             <div className="idsocial">
-              <a href="#" target="_blank" rel="no-opener no-referrer">
+              <a
+                href="https://www.linkedin.com/in/thibaut-senechal-aabbbb199/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fa fa-linkedin" aria-hidden="true"></i>
               </a>
               <a
                 href="https://codepen.io/Nerion1337"
                 target="_blank"
-                rel="no-opener no-referrer"
+                rel="noopener noreferrer"
               >
                 <i className="fa fa-codepen" aria-hidden="true"></i>
               </a>

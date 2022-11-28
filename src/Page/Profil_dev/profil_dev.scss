@@ -53,7 +53,7 @@
                 &:hover {
                     &::before {
                         height: 17vw;
-                        width: 16vw;
+                        width: 16.1vw;
                         transition: 0s, height 1s, width 1s, box-shadow 2.5s;
                         box-shadow: 12px -12px 20px $bdx;
                         border-top: solid 4px rgba($color: #ffffff, $alpha: 0.6);
@@ -61,22 +61,72 @@
                     }
                     &::after {
                         height: 17vw;
-                        width: 16vw;
+                        width: 16.1vw;
                         transition: 0s, height 1s, width 1s, box-shadow 2.5s;
                         box-shadow: -12px 12px 20px $bdx;
                         border-bottom: solid 4px rgba($color: #ffffff, $alpha: 0.6);
                         border-left: solid 4px rgba($color: #ffffff, $alpha: 0.6);
                     }
+                    .myname h3{
+                        color: $bdx;
+                        text-shadow: 0 0 20px $bdx, 0 0 30px $bdx;
+                            &::before{
+                               display: none;
+                            }
+                    }
                 }
-
-                h3 {
+                .myname {
                     position: relative;
-                    text-transform: uppercase;
-                    color: $bdx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 1.2vw;
+                    width: 12.5vw;
                     margin-top: 20px;
-                    letter-spacing: 0.12vw;
-                    text-shadow: 0 0 20px $bdx, 0 0 30px $bdx;
-                    font-size: 1vw;
+                    z-index: 2;
+
+                    h3 {
+                        position: absolute;
+                        text-transform: uppercase;
+                        color: transparent;
+                        letter-spacing: 0.12vw;
+                        font-size: 1vw;
+
+                        &:before {
+                            content: attr(data-text);
+                            position: absolute;
+                            color: $bdx;
+                            border-right: 2px solid rgba($color: #ffffff, $alpha: 0.3);
+                            animation: script 12s steps(16) infinite;
+                            text-shadow: 0 0 10px $bdx, 0 0 20px $bdx;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                      
+                        @keyframes script {
+                            0% {
+                                width: 0;
+                            }
+
+                            25% {
+                                width: 0;
+                            }
+                            50% {
+                                width: 102%;
+                            }
+
+                            85% {
+                                width: 102%;
+                            }
+
+                            100% {
+                                width: 0;
+                            }
+                        }
+                    }
                 }
             }
 
@@ -314,7 +364,7 @@
                 }
                 @media screen and (min-width: 1900px) and (max-width: 2400px) {
                     &::before {
-                        width: 75vw;
+                        width: 74.5vw;
                     }
                 }
                 &::after {
@@ -380,7 +430,7 @@
     }
 }
 
-@import "./profil_devlight.scss";
+@import "./profil_dev_light.scss";
 @media screen and (max-width: 900px) {
     @import "./profil_dev_ecran.scss";
 }

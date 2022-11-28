@@ -6,7 +6,7 @@
     width: 100vw;
     overflow: hidden;
     margin: 0;
-    padding: 85px 30px 10px 20px;
+    padding: 85px 20px 10px 20px;
     /* haut | droit | bas | gauche */
 }
 
@@ -55,7 +55,7 @@
         }
         &:hover {
             &::before {
-                height: 43.5vw;
+                height: 42.5vw;
                 width: 42vw;
                 transition: 0s, height 1s, width 1s, box-shadow 2.5s;
                 box-shadow: 12px -12px 20px $bdx;
@@ -63,7 +63,7 @@
                 border-right: solid 4px rgba($color: #ffffff, $alpha: 0.6);
             }
             &::after {
-                height: 43.5vw;
+                height: 42.5vw;
                 width: 42vw;
                 transition: 0s, height 1s, width 1s, box-shadow 2.5s;
                 box-shadow: -12px 12px 20px $bdx;
@@ -75,11 +75,44 @@
         h3 {
             position: relative;
             text-transform: uppercase;
-            color: $bdx;
+            color: transparent;
             margin-top: 20px;
             letter-spacing: 0.15vw;
-            text-shadow: 0 0 20px $bdx, 0 0 30px $bdx;
             font-size: 3vw;
+
+            &:before {
+                content: attr(data-text);
+                position: absolute;
+                color: $bdx;
+                border-right: 2px solid rgba($color: #ffffff, $alpha: 0.3);
+                animation: script 12s steps(16) infinite;
+                text-shadow: 0 0 10px $bdx, 0 0 20px $bdx;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+            }
+
+            @keyframes script {
+                0% {
+                    width: 0;
+                }
+
+                25% {
+                    width: 0;
+                }
+                50% {
+                    width: 102%;
+                }
+
+                85% {
+                    width: 102%;
+                }
+
+                100% {
+                    width: 0;
+                }
+            }
         }
     }
 
@@ -183,48 +216,34 @@
 .bloc2_profil_dev {
     width: 100%;
     margin: 0;
-    height: auto;
     min-height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     margin: 20px 0 0 0;
 }
 
 .bloc3_profil_dev {
     width: 100%;
-    height: 100vw;
+    height: 120vw;
     box-shadow: 0 0 10px $bdx;
     padding: 3vw 2vw 2vw 2vw;
     margin-bottom: 4vw;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .languagesFrameworks {
     height: 110vw;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-area: "1" "2" "3" "4";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-weight: 600;
     letter-spacing: 0.1vw;
     font-size: 3vw;
     color: rgba($color: #ffffff, $alpha: 0.3);
 }
 
-.bloc3_profil_dev .languagesFrameworks .languageFront {
-    grid-area: 1;
-}
-
-.bloc3_profil_dev .languagesFrameworks .languageBack {
-    grid-area: 2;
-}
-
-.bloc3_profil_dev .languagesFrameworks .frameworks {
-    grid-area: 3;
-}
-
 .bloc3_profil_dev .languagesFrameworks .otherskill {
-    grid-area: 4;
     ul {
         margin-top: 2vw;
         display: flex;
@@ -271,7 +290,7 @@
         content: "";
         background: rgba($color: #ffffff, $alpha: 0.3);
         position: absolute;
-        height: 18vw;
+        height: 20vw;
         width: 1px;
         transform: translate(3px, 19px);
     }
@@ -287,24 +306,40 @@
         margin-bottom: 1vw;
         position: relative;
 
-
         &::before {
             content: "";
             position: absolute;
             background: rgba($color: #ffffff, $alpha: 0.1);
             border-radius: 50px;
             height: 0.6vw;
-            width: 90vw;
         }
 
-        @media screen and (max-width: 650px) {
+        @media screen and (min-width: 650px) and (max-width: 900px) {
             &::before {
                 content: "";
-                position: absolute;
-                background: rgba($color: #ffffff, $alpha: 0.1);
-                border-radius: 50px;
-                height: 0.6vw;
-                width: 86.5vw;
+                width: 90vw;
+            }
+        }
+        @media screen and (min-width: 525px) and (max-width: 650px) {
+            &::before {
+                width: 88.5vw;
+            }
+        }
+
+        @media screen and (min-width: 415px) and (max-width: 525px) {
+            &::before {
+                width: 87vw;
+            }
+        }
+
+        @media screen and (min-width: 350px) and (max-width: 415px) {
+            &::before {
+                width: 85vw;
+            }
+        }
+        @media screen and (min-width: 100px) and (max-width: 350px) {
+            &::before {
+                width: 84vw;
             }
         }
 
